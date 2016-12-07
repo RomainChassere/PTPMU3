@@ -1,0 +1,443 @@
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/**************************** HOMEPAGE ****************************/
+
+/* header */
+
+body{
+	width: 100%;
+}
+
+header{
+	height: 10vh;
+	width: 100%;
+	position: fixed;
+	background-color: white;
+	z-index: 10000;
+}
+
+@font-face{
+	font-family: 'futuraheavy';
+	src: url(../fonts/futuraheavy.otf);
+}
+@font-face{
+	font-family: 'futuramedium';
+	src: url(../fonts/futuramedium.otf);
+}
+@font-face{
+	font-family: 'futuralight';
+	src: url(../fonts/futuralight.otf);
+}
+
+.wrapper{
+	width: 83%;
+	margin: auto;
+}
+
+.contact_infos{
+	float: right;
+	height: 10vh;
+	line-height: 10vh;
+	margin-right: 150px;
+}
+
+.fa-mobile:before{
+	font-size: 3em;
+}
+
+.and{
+	font-size: 1.6em;
+}
+
+.phone_num{
+	font-size: 3em;
+	color: #C00C24;
+}
+
+.logo{
+	display: none;
+	width: 25%;
+}
+
+.main_pic{
+	margin-top: 10vh;
+	height: 90vh;
+	width: 100%;
+}
+
+.overlay{
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #C00C24;
+  transition: height 0.7s ease-in-out;
+}
+.overlay.open{
+  height: 100%;
+}
+.overlay.open .link-wrapper{
+  opacity: 1;
+}
+.overlay .link-wrapper{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 300ms ease 300ms;
+}
+.overlay .link-wrapper a{
+  position: relative;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 160px;
+  color: white;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding-bottom: -60px;
+}
+.overlay .link-wrapper a span{
+  display: inline-block;
+}
+.overlay .link-wrapper a span:after{
+  content: '';
+  display: block;
+  margin-top: -35px;
+  height: 5px;
+  width: 0px;
+  background: transparent;
+  transition: width 250ms ease, background-color 250ms ease;
+}
+.overlay .link-wrapper a:hover{
+  color: white;
+}
+.overlay .link-wrapper a:hover span:after{
+  width: 100%;
+  background-color: white;
+}
+
+.navigation{
+  width: 100%;
+  height: 40px;
+}
+
+.burger_deluxe{
+  position: absolute;
+  top: 3.2vh;
+  right: 30px;
+  cursor: pointer;
+  width: 34px;
+  height: 40px;
+  z-index: 1000;
+	transition: transform 0.3s linear;
+}
+.burger_deluxe:hover{
+	transform: scale(1.2);
+}
+.burger_deluxe .burger_global{
+  position: absolute;
+  border-top: 5px solid #C00C24;
+  width: 100%;
+}
+.burger_deluxe .burger_global.top_bun{
+  top: 0;
+  transition: transform 500ms ease, border 500ms ease;
+  transform-origin: left center;
+}
+.burger_deluxe .burger_global.patty{
+  top: 12px;
+  transition: opacity 500ms ease;
+}
+.burger_deluxe .burger_global.bottom_bun{
+  top: 24px;
+  transition: transform 500ms ease, border 500ms ease;
+  transform-origin: left center;
+}
+.burger_deluxe.open span{
+  border-color: white;
+}
+.burger_deluxe.open .top_bun{
+  transform: rotate(45deg);
+}
+.burger_deluxe.open .patty{
+  opacity: 0;
+}
+.burger_deluxe.open .bottom_bun{
+  transform: rotate(-45deg);
+}
+
+/* infos sur l'entreprise */
+
+.infos{
+	overflow: hidden;
+	margin-top: 10%;
+	margin-bottom: -10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.info_pic{
+	float: left;
+	height: 320px;
+}
+
+.whoarewe{
+	width: 460px;
+	margin-left: 130px;
+}
+
+.whoarewe_infos{
+	margin-top: 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em;
+}
+
+h1{
+	font-family: 'futuraheavy';
+	font-size: 2.3em;
+}
+
+/* interventions */
+
+.interventions {
+	margin-top: 110px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.interventions .main_title {
+	display: block;
+	width: 100%;
+}
+
+.incendies, .accidents, .secours{
+	width: calc(90%/3);
+	margin: 21px;
+}
+.incendies, .accidents, .secours{
+	text-align: center;
+}
+
+.interventions img{
+	text-align: center;
+	height: 200px;
+	margin-top: 30px;
+}
+.texte_courant{
+	font-size: 1.1em;
+	margin-top: 21px;
+	font-family: "Roboto", sans-serif;
+	text-align: justify;
+}
+.actions {
+	font-size: 2.2em;
+	margin-top: 15px;
+	font-family: 'futuraheavy';
+}
+
+/* join les pompiers */
+
+.join {
+	width: 100%;
+	height: 35vh;
+	margin-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: white;
+	background-image: url(../img/background-image.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.join_head{
+	text-align: center;
+	padding-top: 35px;
+	display: block;
+	width: 100%;
+}
+
+.join img{
+	height: 80px;
+	transition: transform 0.2s linear;
+}
+
+.join img:hover{
+	transform: scale(1.15);
+}
+
+
+/* slider vidéo */
+
+.main_title{
+	margin-top: 110px;
+}
+
+.slider{
+	width: 100%;
+	z-index: 1;
+	margin-top: 25px;
+	background-color: rgb(215, 215, 215);
+	position: relative;
+}
+.slick{
+	margin: auto;
+	width: 80%;
+	display: flex;
+}
+
+.slick-prev{
+	width: 50px;
+	height: 50px;
+	left: 5%;
+	position: absolute;
+	z-index: 10;
+}
+
+.slick-next{
+	transform: rotate(180deg);
+	width: 50px;
+	height: 50px;
+	right: 5%;
+	position: absolute;
+	z-index: 10;
+}
+
+.slide_content{
+	text-align: center;
+	margin: 18px;
+	margin-top: 18px;
+}
+
+.slide_content img{
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 270px;
+}
+
+.slide_content p{
+	font-size: 1.3em;
+	font-family: 'futuralight';
+	margin-top: 15px;
+}
+
+.slide_title{
+	font-family: 'futuramedium';
+}
+
+/* les prochaines formations */
+
+.liste{
+	margin-top: 50px;
+}
+
+.liste ul{
+	list-style-image: url(../img/list-type.png);
+}
+
+.liste li{
+	font-size: 1.4em;
+	font-family: 'futuramedium';
+}
+
+
+/* footer */
+
+footer{
+	height: 10vh;
+	width: 100%;
+	margin-top: 5%;
+	background-color: rgb(23, 23, 23);
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 1.3em;
+	font-family: 'futuraheavy';
+}
+
+.footer_infos{
+	padding: 5px;
+	text-align: center;
+	line-height: 4.5vh;
+}
+
+.footer_infos a{
+	color: white;
+	text-decoration: none;
+}
+
+.footer_infos span{
+	color: rgb(184, 184, 184);
+	font-size: 0.9em;
+}
+
+footer ul li{
+	float: left;
+  padding-right: 10px;
+}
+
+/***************************** VIDEO ******************************/
+
+
+/***************************** RECRUTEMENT *************************/
+
+
+/***************************** CONTACT *****************************/
