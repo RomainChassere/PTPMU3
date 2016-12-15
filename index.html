@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="./css/font-awesome-4.6.1/css/font-awesome.css">
+  <link rel="icon" href="./img/favicon.ico" />
+  <link rel="stylesheet" href="./css/font-awesome-4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="./js\slick-1.6.0\slick-1.6.0\slick\slick.css">
   <link rel="stylesheet" href="./js\slick-1.6.0\slick-1.6.0\slick\slick-theme.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
   <header>
-   <img src="http://jsp-cruzy-40.e-monsite.com/medias/images/logo-fnspf.jpg" class="logo" alt="logo">
+    <a href="index.html"><img src="./img/logo.png" class="logo" alt="logo"></a>
    <div class="contact_infos">
      <i class="fa fa-mobile" aria-hidden="true"></i>
      <span class="phone_num">18</span> <span class="and">ou</span> <span class="phone_num">112</span>
@@ -43,18 +43,19 @@
      </div>
  </header>
 
-    <img src="https://userscontent2.emaze.com/images/d3e511d7-d952-4142-83e7-ee3376001d57/b167bef9ad7386430600b11594cfc736.JPG" class="main_pic "alt="MainPic">
+    <img src="./img\main_pic.jpg" class="main_pic "alt="MainPic">
+    <a href="#infos" id="fleche_anim"><img src="img/arrow_down.png" class="fleche" address="true"/> </a>
+
      <div class="wrapper">
       <div class="infos">
-        <img src="./img/fotolia_97547836.jpg" alt="" class="info_pic">
-        <div class="whoarewe">
+        <div class="whoarewe" id="infos">
           <h1> Qui sommes-nous ? </h1>
           <p class="whoarewe_infos"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur reprehenderit consequatur ut, cumque nihil ullam. Hic laboriosam tempora necessitatibus ut atque inventore, aliquid accusamus fugiat, nam harum voluptatem sit ea.</p>
         </div>
       </div>
 
   <div class="interventions">
-    <h1 class="main_title"> Quand intervenons-nous ? </h1>
+    <h1 class="main_title center_title"> Quand intervenons-nous ? </h1>
       <div class="incendies">
         <img src="./img/fire.png" alt="firepicto">
         <h2 class="actions">Incendies</h2>
@@ -85,25 +86,96 @@
   <div class="slider">
     <img src="./img/arrow.png" class="slick-prev"></img>
     <div class="slick">
-      <div class="slide_content"><img src="http://www.allodocteurs.fr/media/1463-anim_coeur_massage_cardiaque.jpg" alt="interv1"><p>Massage cardiaque </p></div>
-      <div class="slide_content"><img src="http://www.defibrillateur-telefunken.fr/wp-content/uploads/2015/01/defibrillateur-dae-automatique-telefunken-600.jpg" alt="interv2"><p>Défibrilateur </p></div>
-      <div class="slide_content"><img src="http://rap.secours.free.fr/Img_rcp/pls.jpg" alt="interv3"><p>Position latérale de sécurité </p></div>
-      <div class="slide_content"><img src="http://www.whsfirstaidkits.com.au/product/smart-bandage/1.jpg" alt="interv4"><p>Premiers soins </p></div>
+      <div class="slide_content"><a href="./didacticiels.html"><img src="http://www.allodocteurs.fr/media/1463-anim_coeur_massage_cardiaque.jpg" class="greyscale" alt="interv1"></a><p>Massage cardiaque </p></div>
+      <div class="slide_content"><a href="./didacticiels.html"><img src="http://www.defibrillateur-telefunken.fr/wp-content/uploads/2015/01/defibrillateur-dae-automatique-telefunken-600.jpg" class="greyscale" alt="interv2"></a><p>Défibrilateur </p></div>
+      <div class="slide_content"><a href="./didacticiels.html"><img src="http://rap.secours.free.fr/Img_rcp/pls.jpg" class="greyscale" alt="interv3"></a><p>Position latérale de sécurité </p></div>
+      <div class="slide_content"><a href="./didacticiels.html"><img src="http://www.whsfirstaidkits.com.au/product/smart-bandage/1.jpg" class="greyscale" alt="interv4"></a><p>Premiers soins </p></div>
     </div>
     <img src="./img\arrow.png" class="slick-next"></img>
   </div>
 
   <div class="wrapper">
     <h1 class="main_title">Les prochaines formations</h1>
-    <div class="liste">
-      <ul>
-        <li>Mercredi 21 novembre 2016 à Haguenau Centre de secours</li>
-        <li>Vendredi 23 novembre 2016 à la Caserne de Haguenau </li>
-        <li>Lundi 3 décembre 2016 à Haguenau Centre de secours </li>
-        <li>Vendredi 7 décembre 2016 au CSC Robert Schuman </li>
-      </ul>
+    <div class="formations">
+      <div class="bloc_forma">
+        <div class="new_forma left border_bot">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 Route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
+
+        <div class="new_forma left border_bot">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 Route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloc_forma">
+        <div class="new_forma left border_bot">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
+
+        <div class="new_forma left border_bot">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloc_forma">
+        <div class="new_forma left" id="responsive">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
+
+        <div class="new_forma left">
+          <div class="date_forma left">
+            <span class="red"> 21 </span> <span class="month">nov</span>
+          </div>
+          <div class="adresse left">
+            37 route de Schweighouse 67500 Haguenau
+          </div>
+          <div class="inscrip">
+            <button> Inscription </button>
+          </div>
+        </div>
     </div>
   </div>
+</div>
 
 
 <footer>
